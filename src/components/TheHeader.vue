@@ -144,6 +144,9 @@ export default {
     &-link {
       @include defaultLink;
       color: $color-light;
+      &:hover {
+        color: $color-red;
+      }
     }
   }
 }
