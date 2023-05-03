@@ -102,8 +102,10 @@ export default { components: { BaseSection } };
     color: $color-light;
     background-color: $color-red;
     &:hover {
-      color: $color-red;
-      background-color: $color-light;
+      @media #{$mouse-device} {
+        color: $color-red;
+        background-color: $color-light;
+      }
     }
   }
 }

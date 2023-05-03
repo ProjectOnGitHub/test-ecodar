@@ -145,7 +145,9 @@ export default {
       @include defaultLink;
       color: $color-light;
       &:hover {
-        color: $color-red;
+        @media #{$mouse-device} {
+          color: $color-red;
+        }
       }
     }
   }
