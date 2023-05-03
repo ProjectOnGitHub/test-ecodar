@@ -18,4 +18,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.section {
+  @include gridable(100%);
+  justify-items: center;
+  box-sizing: border-box;
+}
+</style>

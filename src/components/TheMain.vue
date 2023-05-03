@@ -1,9 +1,13 @@
 <template>
-  <main class="main"></main>
+  <main class="main">
+    <about-section />
+  </main>
 </template>
 
 <script>
-export default {};
+import AboutSection from './AboutSection.vue';
+
+export default { components: { AboutSection } };
 </script>
 
 <style lang="scss" scoped>
