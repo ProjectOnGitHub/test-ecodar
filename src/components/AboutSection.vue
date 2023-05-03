@@ -101,6 +101,10 @@ export default { components: { BaseSection } };
     text-transform: uppercase;
     color: $color-light;
     background-color: $color-red;
+    &:hover {
+      color: $color-red;
+      background-color: $color-light;
+    }
   }
 }
 </style>
