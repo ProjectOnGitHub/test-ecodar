@@ -1,8 +1,15 @@
 <template>
-  <header class="header">
-    <div class="header__container">
+  <header
+    class="header"
+    :class="{ header_fixed: isScrolled }"
+  >
+    <div
+      class="header__container"
+      :class="{ header__container_fixed: isScrolled }"
+    >
       <a
-        href="/"
+        href="
+      "
         class="logo"
       >
         <img
@@ -62,12 +69,23 @@ export default {
     return {
       active: false,
       links,
-      images: imagesMap
+      images: imagesMap,
+      isScrolled: false
     };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
     toggleMenu() {
       this.active = !this.active;
+    },
+    handleScroll() {
+      this.isScrolled = window.scrollY > 0;
     }
   }
 };
@@ -81,15 +99,36 @@ export default {
   box-sizing: border-box;
   height: $header-height;
   z-index: 15;
+  transition: 0.2s ease-in-out;
+  position: relative;
+  &::after {
+    content: '';
+    justify-self: center;
+    box-sizing: border-box;
+    height: 1px;
+    background-color: rgba($color-light, 0.15);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: $regular-width;
+  }
+  &_fixed {
+    position: fixed;
+    background-color: rgba($color-blue, 0.5);
+    height: $header-height-fixed;
+    &::after {
+      max-width: none;
+    }
+  }
   &__container {
     @include gridable(100%);
     grid-template-columns: repeat(2, max-content);
     justify-content: space-between;
     align-items: center;
-    height: $header-height;
     box-sizing: border-box;
-    max-width: calc($common-padding + $regular-width + $common-padding);
+    max-width: calc(2 * $common-padding + $regular-width);
     padding: 0 $common-padding;
+    transition: 0.2s ease-in-out;
   }
   &__button {
     display: none;
