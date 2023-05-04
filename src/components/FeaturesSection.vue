@@ -71,11 +71,9 @@ export default {
     object-fit: contain;
   }
   &__title {
-    text-transform: uppercase;
+    @include title;
     font-size: 14px;
     color: $color-title-dark;
-    font-weight: 700;
-    margin: 0;
   }
   &__text {
     font-size: 14px;

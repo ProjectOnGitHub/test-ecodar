@@ -31,3 +31,10 @@
   transition: 0.2s ease;
   position: relative;
 }
+
+@mixin title {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}

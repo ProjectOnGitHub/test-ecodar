@@ -52,13 +52,10 @@ export default { components: { BaseSection } };
     color: $color-light;
   }
   &__title {
+    @include title;
     font-size: 65px;
     line-height: 1.09;
-    font-weight: 700;
-    text-align: center;
     padding-bottom: 30px;
-    margin: 0;
-    text-transform: uppercase;
     width: 25ch;
     @media screen and (max-width: $desktop) {
       font-size: 48px;
