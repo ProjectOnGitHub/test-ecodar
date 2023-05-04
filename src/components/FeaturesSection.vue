@@ -41,7 +41,7 @@ export default {
 
 <style lang="scss" scoped>
 .features {
-  padding: 85px 0;
+  padding: 120px 0;
   &__list {
     @include flexible(100%);
     @include unmarkedList;
