@@ -286,6 +286,7 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("base-section", {
     attrs: {
+      id: "features",
       "class-name": "features"
     }
   }, [_c("ul", {
@@ -330,6 +331,7 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("base-section", {
     attrs: {
+      id: "projects",
       "class-name": "projects"
     }
   }, [_c("ul", {
@@ -521,11 +523,11 @@ var features = [{
 __webpack_require__.r(__webpack_exports__);
 var links = [{
   id: 1,
-  url: '',
+  url: '#features',
   anchor: 'Features'
 }, {
   id: 2,
-  url: '',
+  url: '#projects',
   anchor: 'Works'
 }, {
   id: 3,
