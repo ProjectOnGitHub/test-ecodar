@@ -114,7 +114,7 @@ export default {
   }
   &_fixed {
     position: fixed;
-    background-color: rgba($color-blue, 0.5);
+    background-color: rgba($color-blue, 0.9);
     height: $header-height-fixed;
     &::after {
       max-width: none;
